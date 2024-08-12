@@ -1,0 +1,253 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Karla", sans-serif;
+
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background-color: hsl(148, 38%, 91%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    width: 550px;
+    height: auto;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    
+}
+.card h2{
+    margin-bottom: 15px;
+}
+#contact-Form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+input,textarea{
+    font-size: 20px;
+}
+textarea{
+    padding: 10px;
+}
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+    display: block;
+}
+label span,label input span{
+    color: blue;
+}
+/* name group */
+.name-group{
+    display: flex;
+    flex-direction: row;
+}
+.name-group .input{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.name-group input{
+    width: 240px;
+    height: 35px;
+    border-radius: 8px;
+    border: 1px solid hsl(186, 15%, 59%);
+}
+.name-group input:focus,.name-group input:focus-visible{
+    border: 1px solid hsl(169, 82%, 27%);
+    outline-color: hsl(169, 82%, 27%);
+
+}
+.name-group .label{
+    display: flex;
+    flex-direction: row;
+    gap: 183px;
+    height: 25px;
+}
+.name-group label{
+    font-size: 16px;
+}
+/* email group */
+.email-group {
+    display: flex;
+    flex-direction: column;
+}
+.email-group label{
+    height: 25px;
+}
+.email-group input{
+    width: 100%;
+    height: 30px;
+    border: 1px solid hsl(186, 15%, 59%);
+    border-radius: 6px;
+    padding: 20px;
+}
+.email-group input:focus,.email-group input:focus-visible{
+    border: 1px solid hsl(169, 82%, 27%);
+    outline-color: hsl(169, 82%, 27%);
+}
+/* radio group */
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.radio-group label {
+    height: 25px;
+}
+
+.radio-group .query-options {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.radio-group .query-options label {
+    display: flex;
+    width: 240px;
+    height: 35px;
+    padding: 5px;
+    border-radius: 6px;
+    border: 1px solid hsl(186, 15%, 59%);
+    align-items: center;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    cursor: pointer;
+}
+
+.radio-group .query-options label input {
+    margin-right: 10px;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.radio-group .query-options label input::before {
+    display: flex;
+    content: "";
+    border-radius: 50%;
+    border: 3px solid #FFF;
+    outline: 1px solid #999;
+    height: 10px;
+    width: 10px;
+}
+
+.radio-group .radio-label.checked {
+    background-color: hsl(148, 38%, 91%);
+    border-color: hsl(169, 82%, 27%);
+}
+input[type='radio']:checked {
+    content: url('/assets/images/icon-radio-selected.svg');
+    width: 20px;
+    height: 20px;
+}
+/* message group */
+.message-group{
+    display: flex;
+    flex-direction: column;
+}
+.message-group label{
+    height: 25px;
+}
+.message-group textarea{
+    height: 65px;
+    border: 1px solid hsl(186, 15%, 59%);
+    border-radius: 6px;
+}
+.message-group textarea:focus,.message-group textarea:focus-visible{
+    border: 1px solid hsl(169, 82%, 27%);
+    outline-color: hsl(169, 82%, 27%);
+}
+/* checkbox group */
+.checkbox-group{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.checkbox-group label {
+    cursor: pointer;
+}
+.checkbox-group label input{
+    margin-right: 10px;
+    appearance: none;
+    -webkit-appearance: none;
+}
+.checkbox-group label input::before{
+    display: flex;
+    content: "";
+    height: 15px;
+    width: 15px;
+    background-color: #fff;
+    border: 1px solid #999;
+}
+input[type='checkbox']:checked {
+    display: inline-block;
+    content: url('/assets/images/icon-checkbox-check.svg');
+    width: 15px;
+    height: 15px;
+}
+/* buttons */
+button{
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #FFF;
+    background-color: hsl(169, 82%, 27%);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+button:hover{
+    background-color: hsl(169, 82%, 10%)
+}
+/* alert */
+.alert{
+    display: none;
+    padding: 10px;
+    position: absolute;
+    top: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: hsl(187, 24%, 22%);
+    border-radius: 8px;
+    color: #FFF;
+    flex-direction: column;
+    gap: 10px;
+}
+.alert h3{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.alert h3 img{
+    margin-right: 8px;
+}
+.alert p{
+    font-size: 16px;
+    color: hsl(186, 15%, 59%);
+}
+/* media quiery */
+@media (max-width: 375px) {
+    .card{
+        width: 98%;
+    }
+    .name-group{
+        flex-direction: column;
+    }
+    .radio-group .query-options{
+        flex-direction: column;
+    }
+    .name-group input{
+        width: 100%;
+    }
+    .radio-group .query-options label{
+        width: 100%;
+    }
+}
